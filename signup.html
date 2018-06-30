@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-navbar  color="primary">
+    <ion-title>{{ 'SIGNUP_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="myBackground">
+  <ion-card>
+  <form (submit)="doSignup()">
+    <ion-list>
+      <div padding>
+        <button ion-button color="primary" block> FILL INFORMATION.</button>
+      </div>
+
+      <ion-item>
+        <ion-label fixed>First name</ion-label>
+        <ion-input type="text" [(ngModel)]="account.firstname" name="firtsname"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Last name</ion-label>
+        <ion-input type="text" [(ngModel)]="account.lastname" name="lastname"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Location</ion-label>
+        <ion-input type="text" [(ngModel)]="account.location" name="location"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label fixed>Email</ion-label>
+        <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
+      </ion-item>
+       
+      <ion-item>
+        <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
+        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+      </ion-item>
+
+      <div padding>
+        <button ion-button color="primary" block>{{ 'SIGNUP_BUTTON' | translate }}</button>
+      </div>
+
+    </ion-list>
+  </form>
+</ion-card>
+</ion-content>
